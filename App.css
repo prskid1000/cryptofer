@@ -1,0 +1,71 @@
+.button
+{
+    float:left;
+    height:10%;
+    width:12%;
+    background-color:#336600;
+    text-align:center;
+    border: 2% solid red;
+    border-radius: 50% 20%;
+    color: #ffffff;
+    border-color: #006080;
+}
+.button:hover
+{
+    float:left;
+    height:10%;
+    width:13%;
+    background-color:#336600;
+    text-align:center;
+    border-color: #00bfff;
+}
+
+.btn
+{
+     padding-top:2%;
+     padding-left:2%;
+}
+
+.textbox
+{
+    float:left;
+    height:100%;
+    width:30%;
+    background-color:#d9ffb3;
+    text-align:center;
+    color: #000000;
+    padding:1%;
+}
+
+.textbox:hover
+{
+    float:left;
+    height:100%;
+    width:30%;
+    background-color:#b3ffb3;
+    text-align:center;
+    color: #000000;
+    padding:1%;
+}
+
+.Title
+{
+    height:100%;
+    width:100%;
+    font-size:300%;
+    text-align:center;
+    background-color:#ccffcc;
+}
+
+.pad
+{
+     padding-left:1%;
+}
+
+.select
+{
+    float:left;
+    padding-left:5%;
+    padding-right:50%;
+    padding-bottom:5%;
+}
