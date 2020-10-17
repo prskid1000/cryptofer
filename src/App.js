@@ -1,4 +1,5 @@
 import React from 'react';
+/* eslint-disable no-unused-vars */
 import ReactDOM from 'react-dom';
 import './App.css';
 
@@ -229,7 +230,7 @@ function affine_decrypt(){
         var ai=0;
         for(var j=0;j<26;j++)
         {
-            if(a*j==k)
+            if(a*j===k)
             {
                 ai=j;
                 break;
