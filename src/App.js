@@ -8,7 +8,7 @@ class Title extends React.Component{
     constructor(props){
         super(props);
         this.state={name:"Title"}
-    }
+    }s
     render(){
         return (
            <div className="Title">CRYPTOFER</div>
@@ -42,7 +42,7 @@ class EncryptSelect extends React.Component{
              <option value="Caeser">Caeser</option>
              <option value="Vigenere">Vigenere</option>
              <option value="Affine">Affine</option>
-             </select> 
+             </select>
              </div>
         );
     }
@@ -154,7 +154,7 @@ class DecryptTextAns extends React.Component{
 
 //eslint-disable-next-line
 function select_encrypt(){
-    
+
     var box=document.getElementById("en");
     var choice=box.value;
 
@@ -176,7 +176,7 @@ function select_encrypt(){
 
 //eslint-disable-next-line
 function select_decrypt(){
-    
+
     var box=document.getElementById("de");
     var choice=box.value;
 
@@ -204,14 +204,14 @@ function affine_encrypt(){
     var data=document.getElementById("enk").value.split(" ");
     var a=data[0]%26;
     var b=data[1]%26;
-    
+
     for(var i=0;i<text.length;i++)
     {
         var tmp=String.fromCharCode((((a*(text.charCodeAt(i)-65))+b)%26)+65);
         if(tmp<'A')tmp=" ";
         result+=tmp;
     }
-    
+
      document.getElementById("eans").value=result;
 }
 
@@ -223,7 +223,7 @@ function affine_decrypt(){
     var data=document.getElementById("dnk").value.split(" ");
     var a=parseInt(data[0]%26);
     var b=parseInt(data[1]%26);
-    
+
     for(var i=0;i<text.length;i++)
     {
         var k=text.charCodeAt(i)-65-b;
@@ -240,49 +240,18 @@ function affine_decrypt(){
         if(tmp<'A')tmp=" ";
         result+=tmp;
     }
-    
+
      document.getElementById("dans").value=result;
 }
 
 //eslint-disable-next-line
 function vigenere_encrypt(){
-    var result="";
-    var text=document.getElementById("ent").value;
-    text=text.toUpperCase();
-    var key=document.getElementById("enk").value;
-    key=key.toUpperCase();
-    var kl=key.length;
-    
-    for(var i=0,j=0;i<text.length;i++,j++)
-    {
-        if(j>=kl)j=0;
-        var tmp=String.fromCharCode(((text.charCodeAt(i)-65+key.charCodeAt(j)-65)%26)+65);
-        if(tmp<'A')tmp=" ";
-        result+=tmp;
-    }
-    
-     document.getElementById("eans").value=result;
+
 }
 
 //eslint-disable-next-line
 function vigenere_decrypt(){
-    var result="";
-    var text=document.getElementById("dnt").value;
-    text=text.toUpperCase();
-    var key=document.getElementById("dnk").value;
-    key=key.toUpperCase();
-    var kl=key.length;
-    
-    for(var i=0,j=0;i<text.length;i++,j++)
-    {
-        if(j>=kl)j=0;
-        var tmp=String.fromCharCode(((text.charCodeAt(i)-key.charCodeAt(j)+26)%26)+65);
-        if(tmp<'A')tmp=" ";
-        result+=tmp;
-    }
-    
-     document.getElementById("dans").value=result;
-    
+  
 }
 
 //eslint-disable-next-line
@@ -291,14 +260,14 @@ function caeser_encrypt(){
     var text=document.getElementById("ent").value;
     text=text.toUpperCase();
     var key=parseInt(document.getElementById("enk").value);
-    
+
     for(var i=0;i<text.length;i++)
     {
         var tmp=String.fromCharCode(((text.charCodeAt(i)-65+key%26)%26)+65);
         if(tmp<'A')tmp=" ";
         result+=tmp;
     }
-    
+
      document.getElementById("eans").value=result;
 }
 
@@ -308,14 +277,14 @@ function caeser_decrypt(){
     var text=document.getElementById("dnt").value;
     text=text.toUpperCase();
     var key=parseInt(document.getElementById("dnk").value);
-    
+
     for(var i=0,j=0;i<text.length;i++,j++)
     {
         var tmp=String.fromCharCode(((text.charCodeAt(i)+65-key%26)%26)+65);
         if(tmp<'A')tmp=" ";
         result+=tmp;
     }
-    
+
      document.getElementById("dans").value=result;
 }
 
